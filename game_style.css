@@ -1,0 +1,104 @@
+body{
+	margin: 0;
+	padding: 0;
+	background-color: gray;
+	text-align: left;
+	overflow: hidden;
+}
+#game{
+	width: 600px;
+	height: 600px;
+	display: inline-block;
+	word-spacing : -.36em;
+
+}
+
+#player{
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	
+	padding: 0;
+	margin: 0;
+	background-image: url(IMG/player_r.png);
+}
+
+#wall{
+	width: 50px;
+	height: 50px;
+	
+	background-color: green;
+	padding: 0;
+	margin: 0;
+	background-image: url(IMG/wall.jpg);
+}
+
+#door{
+	width: 50px;
+	height: 50px;
+	
+	background-color: brown;
+	padding: 0;
+	margin: 0;
+	background-image: url(IMG/door.jpg);
+}
+
+#empty{
+	width: 50px;
+	height: 50px;
+	
+	padding: 0;
+	margin: 0;
+    background-image: url(IMG/flor_wood.jpg);
+
+}
+
+#empty_asfalt{
+	width: 50px;
+	height: 50px;
+	
+	padding: 0;
+	margin: 0;
+    background-image: url(IMG/asfalt.jpg);
+
+}
+
+#empty_asfalt_plant{
+	width: 50px;
+	height: 50px;
+	
+	padding: 0;
+	margin: 0;
+    background-image: url(IMG/asfalt_plant.jpg);
+
+}
+
+#weapon{
+	width: 50px;
+	height: 50px;
+	
+	background-color: red;
+	padding: 0;
+	margin: 0;
+}
+
+#key{
+	width: 50px;
+	height: 50px;
+	
+	background-color: blue;
+	padding: 0;
+	margin: 0;
+}
+
+.world{
+	display: inline-block;
+
+
+}
+
+#row{
+	width: 600px;
+	height: 50px;
+	
+}
