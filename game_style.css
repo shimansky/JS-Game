@@ -10,6 +10,8 @@ body{
 	height: 600px;
 	display: inline-block;
 	word-spacing : -.36em;
+	position: absolute;
+	
 
 }
 
@@ -17,10 +19,22 @@ body{
 	width: 50px;
 	height: 50px;
 	position: absolute;
-	
+	left:400px;
+	bottom:150px;
 	padding: 0;
 	margin: 0;
 	background-image: url(IMG/player_r.png);
+}
+
+#monster{
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	left:400px;
+	bottom: 200px;
+	padding: 0;
+	margin: 0;
+	background-image: url(IMG/monster_r.png);
 }
 
 #wall{
@@ -33,14 +47,47 @@ body{
 	background-image: url(IMG/wall.jpg);
 }
 
-#door{
+#locked_door{
 	width: 50px;
 	height: 50px;
-	
 	background-color: brown;
 	padding: 0;
 	margin: 0;
-	background-image: url(IMG/door.jpg);
+	background-image: url(IMG/locked_door.png);
+}
+
+#unlocked_door{
+	width: 50px;
+	height: 50px;
+	background-color: brown;
+	padding: 0;
+	margin: 0;
+	background-image: url(IMG/unlocked_door.png);
+}
+
+#key_card_white{
+	width: 50px;
+	height: 50px;
+	padding: 0;
+	margin: 0;
+	background-image: url(IMG/key_card_1.jpg);
+}
+
+#key_card_black{
+	width: 50px;
+	height: 50px;
+	padding: 0;
+	margin: 0;
+	background-image: url(IMG/key_card_2.jpg);
+}
+
+#medic_kit{
+	width: 50px;
+	height: 50px;
+	background-color: brown;
+	padding: 0;
+	margin: 0;
+	background-image: url(IMG/medic_kit.jpg);
 }
 
 #empty{
@@ -82,14 +129,7 @@ body{
 	margin: 0;
 }
 
-#key{
-	width: 50px;
-	height: 50px;
-	
-	background-color: blue;
-	padding: 0;
-	margin: 0;
-}
+
 
 .world{
 	display: inline-block;
