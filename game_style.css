@@ -1,3 +1,6 @@
+
+
+
 body{
 	margin: 0;
 	padding: 0;
@@ -5,6 +8,9 @@ body{
 	text-align: left;
 	overflow: hidden;
 }
+
+
+
 #game{
 	width: 600px;
 	height: 600px;
@@ -47,7 +53,16 @@ body{
 	background-image: url(IMG/wall.jpg);
 }
 
-#locked_door{
+#locked_door_white{
+	width: 50px;
+	height: 50px;
+	background-color: brown;
+	padding: 0;
+	margin: 0;
+	background-image: url(IMG/locked_door.png);
+}
+
+#locked_door_black{
 	width: 50px;
 	height: 50px;
 	background-color: brown;
@@ -68,17 +83,23 @@ body{
 #key_card_white{
 	width: 50px;
 	height: 50px;
+	position: absolute;
+	left:300px;
+	bottom:300px;
 	padding: 0;
 	margin: 0;
-	background-image: url(IMG/key_card_1.jpg);
+	background-image: url(IMG/key_card_1.png);
 }
 
 #key_card_black{
 	width: 50px;
 	height: 50px;
+	position: absolute;
+	left:250px;
+	bottom:150px;
 	padding: 0;
 	margin: 0;
-	background-image: url(IMG/key_card_2.jpg);
+	background-image: url(IMG/key_card_2.png);
 }
 
 #medic_kit{
