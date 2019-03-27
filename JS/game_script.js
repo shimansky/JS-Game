@@ -4,12 +4,14 @@ var bottom=150;
 var box;
 // функция, выполняется при загрузке - находит элементы по id присваивает им имена
 window.onload = function(){
+alert("\"HIDDEN STRUCTURE\" you got somewhere in an unknown place... ")
 figure=document.getElementById('player');
 keywhite=document.getElementById('key_card_white');
 keyblack=document.getElementById('key_card_black');
 enemy=document.getElementById('monster');
 lock_white=document.getElementById('locked_door_white');
 lock_black=document.getElementById('locked_door_black');
+exit_door=document.getElementById('exit_door_open');
  };
 
 
@@ -20,6 +22,7 @@ var p = figure.getBoundingClientRect();
 var m = enemy.getBoundingClientRect();
 var k = keywhite.getBoundingClientRect();
 var b = keyblack.getBoundingClientRect();
+
 if (p.right==k.right&&p.bottom==k.bottom) {
     alert("you have a white key!");
     lock_white.id="unlocked_door";
@@ -70,8 +73,13 @@ up_empty = up_elem.id;
 
 }
 
+// сценарий поведения бота
+function bot_scenery(){
+
+}
+
 // обаботчики нажатий на клавиши
-window.onkeydown = function(){
+window.onkeyup = function(){
 
 
  // left
@@ -101,6 +109,7 @@ window.onkeydown = function(){
       bottom=bottom-50;
       figure.style.bottom= bottom + 'px';
       figure.style.backgroundImage='URL("IMG/player_r.png")';
+      
      }
     
     }
