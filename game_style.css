@@ -5,7 +5,7 @@ body{
 	margin: 0;
 	padding: 0;
 	background-color: gray;
-	text-align: left;
+	text-align: center;
 	overflow: hidden;
 }
 
@@ -14,9 +14,10 @@ body{
 #game{
 	width: 600px;
 	height: 600px;
-	display: inline-block;
+	display: block;
 	word-spacing : -.36em;
 	position: absolute;
+
 	
 
 }
@@ -38,8 +39,8 @@ body{
 	width: 50px;
 	height: 50px;
 	position: absolute;
-	left:400px;
-	bottom: 200px;
+	left:100px;
+	bottom: 450px;
 	padding: 0;
 	margin: 0;
 	background-image: url(IMG/monster_r.png);
