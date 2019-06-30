@@ -1,43 +1,43 @@
-// глобальные пременные для CSS
-var left=400;
-var bottom=150;
+﻿// глобальные пременные для CSS
+var left=250;
+var bottom=450;
 var box;
 var temp = 100;
 var vertical=450;
 
 
-// блок функций анимации бота
- var botMoveRight = function() {
-  temp=temp+50;
-  enemy.style.left = temp + 'px';
-
-}
-
- var botMoveLeft = function() {
-  temp=temp-50;
-  enemy.style.left = temp + 'px';
-
-}
-
-var botMoveUp = function() {
-  vertical=vertical+50;
-  enemy.style.bottom = vertical + 'px';
-
-}
-
-var botMoveDown = function() {
-  vertical=vertical-50;
-  enemy.style.bottom = vertical + 'px';
-
-}
-
-function botMove(){
-setTimeout(botMoveRight, 500);
-setTimeout(botMoveRight, 1000);
-setTimeout(botMoveLeft, 1500);
-setTimeout(botMoveLeft, 2000);
-
-}
+// // блок функций анимации бота
+//  var botMoveRight = function() {
+//   temp=temp+50;
+//   enemy.style.left = temp + 'px';
+//
+// }
+//
+//  var botMoveLeft = function() {
+//   temp=temp-50;
+//   enemy.style.left = temp + 'px';
+//
+// }
+//
+// var botMoveUp = function() {
+//   vertical=vertical+50;
+//   enemy.style.bottom = vertical + 'px';
+//
+// }
+//
+// var botMoveDown = function() {
+//   vertical=vertical-50;
+//   enemy.style.bottom = vertical + 'px';
+//
+// }
+//
+// function botMove(){
+// setTimeout(botMoveRight, 500);
+// setTimeout(botMoveRight, 1000);
+// setTimeout(botMoveLeft, 1500);
+// setTimeout(botMoveLeft, 2000);
+//
+// }
 
 
 
@@ -47,12 +47,12 @@ window.onload = function(){
 figure=document.getElementById('player');
 keywhite=document.getElementById('key_card_white');
 keyblack=document.getElementById('key_card_black');
-enemy=document.getElementById('monster');
+// enemy=document.getElementById('monster');
 lock_white=document.getElementById('locked_door_white');
 lock_black=document.getElementById('locked_door_black');
 exit_door=document.getElementById('exit_door_open');
 setInterval(get_coordinates,10);
-setInterval(botMove,2000);
+// setInterval(botMove,2000);
  };
 
 
@@ -60,14 +60,17 @@ setInterval(botMove,2000);
 // // функция определения координат игрока при столкновениях с монстром и вещами
 function get_coordinates(){
 var p = figure.getBoundingClientRect();
-var m = enemy.getBoundingClientRect();
+// var m = enemy.getBoundingClientRect();
 var k = keywhite.getBoundingClientRect();
 var b = keyblack.getBoundingClientRect();
 
 // логика работы дверей и карточек-ключей
 if (p.right==k.right&&p.bottom==k.bottom) {
-    // alert("you have a white key!");
-    lock_white.id="unlocked_door";
+  var playerName = prompt("Твое имя:");
+  alert(playerName + ", тебя приняли на работу, можешь приступать!)))")
+  if(playerName != 0){alert("Получи свою карточку электронного доступа: "
+   + playerName + " status: active, serial number: 498, access: 01");
+  };
     keywhite.style.display="none";
   }
 
@@ -78,11 +81,16 @@ if (p.right==b.right&&p.bottom==b.bottom) {
     keyblack.style.display="none";
   }
 
-// отслеживание столкновений с ботом
- if (p.right==m.right&&p.bottom==m.bottom){
-  alert("monster detected!");
+// отслеживание выхода игрока с уровня
+if (p.right>=600 || p.right<=50) {
+  document.location.href = "Office01.html";
 
-}
+};
+// // отслеживание столкновений с ботом
+//  if (p.right==m.right&&p.bottom==m.bottom){
+//   alert("monster detected!");
+//
+// }
 
 
 
@@ -127,7 +135,7 @@ window.onkeyup = function(){
  if(event.keyCode==37){
     get_coordinates();
 
-    if (left_empty!="wall"&&left_empty!="locked_door_white"&&left_empty!="locked_door_black") {
+    if (left_empty!="wall" && left_empty!="wallCooler"&& left_empty!="wallSofa" && left_empty!="wallPlant" &&left_empty!="locked_door_white"&&left_empty!="locked_door_black") {
     left=left-50;
     figure.style.left = left + 'px';
     figure.style.backgroundImage='URL("IMG/player_l.png")';
@@ -138,9 +146,10 @@ window.onkeyup = function(){
     else if(event.keyCode==39){
       get_coordinates();
 
-      if (right_empty!="wall"&&right_empty!="locked_door_white"&&right_empty!="locked_door_black") {
+      if (right_empty!="wall" && right_empty!="wallCooler"&& right_empty!="wallSofa" && right_empty!="wallPlant" &&right_empty!="locked_door_white"&&right_empty!="locked_door_black") {
       left=left+50;
-      figure.style.left= left + 'px';
+      figure.style.left = left + 'px';
+
       figure.style.backgroundImage='URL("IMG/player_r.png")';
       }
 }
@@ -149,7 +158,7 @@ window.onkeyup = function(){
     else if(event.keyCode==40){
       get_coordinates();
 
-      if (down_empty!="wall"&&down_empty!="locked_door_white"&&down_empty!="locked_door_black") {
+      if (down_empty!="wall"  && down_empty!="wallCooler"&& down_empty!="wallSofa" && down_empty!="wallPlant" &&down_empty!="locked_door_white"&&down_empty!="locked_door_black") {
       bottom=bottom-50;
       figure.style.bottom= bottom + 'px';
       figure.style.backgroundImage='URL("IMG/player_r.png")';
@@ -160,7 +169,7 @@ window.onkeyup = function(){
     else if(event.keyCode==38){
       get_coordinates();
 
-      if (up_empty!="wall"&&up_empty!="locked_door_white"&&up_empty!="locked_door_black") {
+      if (up_empty!="wall"  && up_empty!="wallCooler"&& up_empty!="wallSofa" && up_empty!="wallPlant" &&up_empty!="locked_door_white"&&up_empty!="locked_door_black") {
       bottom=bottom+50;
       figure.style.bottom= bottom + 'px';
       figure.style.backgroundImage='URL("IMG/player_l.png")';
@@ -174,7 +183,7 @@ window.onkeyup = function(){
 // обаботчики нажатия кнопок на станице
 function up(){
    get_coordinates();
-      if (up_empty!="wall"&&up_empty!="locked_door_white"&&up_empty!="locked_door_black") {
+      if (up_empty!="wall" && up_empty!="wallCooler"&& up_empty!="wallSofa" && up_empty!="wallPlant" &&up_empty!="locked_door_white"&&up_empty!="locked_door_black") {
       bottom=bottom+50;
       figure.style.bottom= bottom + 'px';
       figure.style.backgroundImage='URL("IMG/player_l.png")';
@@ -184,7 +193,7 @@ function up(){
 
 function down(){
   get_coordinates();
-      if (down_empty!="wall"&&down_empty!="locked_door_white"&&down_empty!="locked_door_black") {
+      if (down_empty!="wall" && down_empty!="wallCooler"&& down_empty!="wallSofa" && down_empty!="wallPlant" &&down_empty!="locked_door_white"&&down_empty!="locked_door_black") {
       bottom=bottom-50;
       figure.style.bottom= bottom + 'px';
       figure.style.backgroundImage='URL("IMG/player_r.png")';
@@ -194,7 +203,7 @@ function down(){
 
 function lefty(){
   get_coordinates();
-    if (left_empty!="wall"&&left_empty!="locked_door_white"&&left_empty!="locked_door_black") {
+    if (left_empty!="wall" && left_empty!="wallCooler"&& left_empty!="wallSofa" && left_empty!="wallPlant" &&left_empty!="locked_door_white"&&left_empty!="locked_door_black") {
     left=left-50;
     figure.style.left = left + 'px';
     figure.style.backgroundImage='URL("IMG/player_l.png")';
@@ -204,7 +213,7 @@ function lefty(){
 
 function right(){
    get_coordinates();
-      if (right_empty!="wall"&&right_empty!="locked_door_white"&&right_empty!="locked_door_black") {
+      if (right_empty!="wall" && right_empty!="wallCooler"&& right_empty!="wallSofa" && right_empty!="wallPlant" &&right_empty!="locked_door_white"&&right_empty!="locked_door_black") {
       left=left+50;
       figure.style.left= left + 'px';
       figure.style.backgroundImage='URL("IMG/player_r.png")';

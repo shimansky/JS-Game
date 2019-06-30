@@ -7,7 +7,7 @@ body{
 	background-color: black;
 	text-align: center;
 	color: white;
-	overflow: hidden;
+	/* overflow: hidden; */
 }
 
 
@@ -27,11 +27,12 @@ body{
 	width: 50px;
 	height: 50px;
 	position: absolute;
-	left:400px;
-	bottom:150px;
+	left:250px;
+	bottom:450px;
 	padding: 0;
 	margin: 0;
 	background-image: url(IMG/player_r.png);
+	/* transition: all 0.2s ease; */
 }
 
 
@@ -45,8 +46,15 @@ body{
 	padding: 0;
 	margin: 0;
 	background-image: url(IMG/monster_r.png);
-	transition: all 0.5s ease;
+}
 
+#black{
+	width: 50px;
+	height: 50px;
+
+	background-color: black;
+	padding: 0;
+	margin: 0;
 }
 
 #wall{
@@ -56,8 +64,41 @@ body{
 	background-color: green;
 	padding: 0;
 	margin: 0;
-	background-image: url(IMG/wall.jpg);
+	background-image: url(IMG/Office/OficceWall.jpg);
 }
+
+#wallCooler{
+	width: 50px;
+	height: 50px;
+
+	background-color: green;
+	padding: 0;
+	margin: 0;
+	background-image: url(IMG/Office/OficceWallCooler.jpg);
+}
+
+#wallPlant{
+	width: 50px;
+	height: 50px;
+
+	background-color: green;
+	padding: 0;
+	margin: 0;
+	background-image: url(IMG/Office/OficceWallPlant.jpg);
+}
+
+#wallSofa{
+	width: 50px;
+	height: 50px;
+
+	background-color: green;
+	padding: 0;
+	margin: 0;
+	background-image: url(IMG/Office/OficceWallSofa.jpg);
+}
+
+
+
 
 #locked_door_white{
 	width: 50px;
@@ -65,7 +106,7 @@ body{
 	background-color: brown;
 	padding: 0;
 	margin: 0;
-	background-image: url(IMG/locked_door.png);
+	background-image: url(IMG/Office/OficceDoorClosed.jpg);
 }
 
 #locked_door_black{
@@ -83,7 +124,7 @@ body{
 	background-color: brown;
 	padding: 0;
 	margin: 0;
-	background-image: url(IMG/unlocked_door.png);
+	background-image: url(IMG/Office/OficceDoorOpen.jpg);
 }
 
 #key_card_white{
@@ -91,7 +132,7 @@ body{
 	height: 50px;
 	position: absolute;
 	left:300px;
-	bottom:300px;
+	bottom:450px;
 	padding: 0;
 	margin: 0;
 	background-image: url(IMG/key_card_1.png);
@@ -133,9 +174,11 @@ body{
 
 	padding: 0;
 	margin: 0;
-    background-image: url(IMG/asfalt.jpg);
+    background-image: url(IMG/Office/OficceFloor.jpg);
 
 }
+
+
 
 #empty_asfalt_plant{
 	width: 50px;
@@ -143,7 +186,7 @@ body{
 
 	padding: 0;
 	margin: 0;
-    background-image: url(IMG/asfalt_plant.jpg);
+    background-image: url(IMG/Office/OficceFloorTablejpg.jpg);
 
 }
 
